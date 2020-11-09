@@ -1,0 +1,17 @@
+<!-- wmlx用来编写页面骨架相当于WEB中HTML -->
+<!-- view text是小程序内置的组件 -->
+<!-- view相当于div是用来做容器的 -->
+<view class="container">  
+  <image class="user-avatar" src="/images/avatar/4.png"></image>
+  <!-- 
+    rpx和px的区别:
+    rpx单位的图片会随着手机机型的变化而去适应不同机型合适的大小
+    px则是固定大小，（iPhone6尺寸下）如果要用px则需要在图片原尺寸上除2（不管什么数值都是除二）
+    -->
+  <text class="user-name">Hello, Minos</text> 
+  <!-- <button></button> 一般的button用view实现而不用button-->
+  <!-- catch:tap也能监听事件，不同的是用catch会阻止事件向上冒泡，即让同样有事件监听的父元素无法监听到子元素的事件 -->
+  <view class="moto-container" bind:tap="onTap"> <!--bind:tap监听事件 onTap:自定义的回调函数-->
+    <text class="moto">开启小程序之旅</text>
+  </view> 
+</view>

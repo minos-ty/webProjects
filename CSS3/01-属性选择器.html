@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 标签选择器权重为1 */
+        button {
+            /* 鼠标悬停变成小手*/
+            cursor: pointer;
+        }
+
+        /* 属性选择器使用方法,选择即是button又有disabled属性的元素*/
+        /* 类选择器,属性选择器,伪类选择器,权重都是10  */
+        button[disabled] {
+            cursor: default;
+        }
+
+        input[type="search"] {
+            color: pink;
+        }
+
+        /* class^="icon" ^=:表示已icon开头 */
+        div[class^="icon"] {
+            color: rgb(156, 37, 37);
+        }
+
+        /* class$="icon" $=:表示以icon结尾 */
+        div[class$="icon"]{
+            color: green;
+        }
+
+        /* class*="icon" *=:表示以icon结尾 */
+        /* div[class*="icon"]{
+            color: burlywood;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 
+        disabled="disabled" : 禁用按钮
+     -->
+    <button>按钮</button>
+    <button>按钮</button>
+    <button disabled="disabled">按钮</button>
+    <button disabled="disabled">按钮</button>
+
+    <input type="text" value="文本框">
+    <input type="text" value="文本框">
+    <input type="text" value="文本框">
+    <input type="search" name="" id="" value="搜索框">
+    <input type="search" name="" id="" value="搜索框">
+    <input type="search" name="" id="" value="搜索框">
+
+    <div class="icon1">图标1</div>
+    <div class="icon2">以关键词开头</div>
+    <div class="icon3">图标3</div>
+    <div class="aagkjicon">以关键词结尾</div>
+    <div class="aagkjiconagag">只要包含关键词就行</div>
+
+
+</body>
+</html>

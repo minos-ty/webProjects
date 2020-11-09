@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ui>
+        <li>根据标签名获取元素1</li>
+        <li>根据标签名获取元素2</li>
+        <li>根据标签名获取元素3</li>
+        <li>根据标签名获取元素4</li>
+    </ui>
+
+    <ui id='nav'>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+    </ui>
+
+    <script>
+        // 返回的是获取到的元素对象的集合 以伪数组的形式存储
+        var lis =  document.getElementsByTagName('li');
+        console.log(lis)
+        console.log(lis[0]);
+        // 遍历
+        for(var i = 0; i < lis.length; i++){
+            console.log(lis[i]);
+        }
+
+        //element.getElementByTagName() 可以得到这个元素里面的某些元素
+        var nav = document.getElementById('nav');//获得nav元素
+        var navLis =  nav.getElementsByTagName('li');
+        console.log(navLis)
+    </script>
+</body>
+</html>

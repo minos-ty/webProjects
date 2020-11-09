@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">唐伯虎</button>
+    
+    <script>
+        /* 
+            1.事件是由三部分组成 事件源 事件类型 事件处理程序 称为事件三要素
+                a.事件源：事件被触发的对象 
+                b.事件类型： 如鼠标点击(onclick) 鼠标经过 键盘按下等
+                c.事件处理程序：通过一个函数赋值的方式完成
+            
+            2.设置事件步骤
+                a.获取事件源
+                b.绑定事件/注册事件
+                c.添加事件处理程序
+        */
+
+        // 点击一个按钮，弹出对话框
+        var btn = document.getElementById('btn');
+        btn.onclick = function() {
+            alert('点秋香');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 150px;
+            margin-left: 100px;
+            margin-top: 100px;
+            background-color:pink;
+            /* transform: translate(200px, 200px); */
+            /* 
+            transform:rotate(45deg)
+                顺时针旋转45°  -45deg：逆时针  
+                *一个选择器中只有一条transform语句会执行 
+             */
+            /* transform: rotate(45deg); */
+            border-radius: 50%;
+            border: 5px solid grey;
+            /* 过渡写到本身上，谁做动画给谁加 */
+            transition: all 0.5s;
+        }
+        div:hover {
+            /* 实现鼠标悬停图片转圈 */
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

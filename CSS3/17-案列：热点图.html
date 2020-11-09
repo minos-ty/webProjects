@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        .map {
+            position: relative;
+            width: 747px;
+            height: 617px;
+            background:url(../resources//media//map.png);
+        }
+
+        .city {
+            position: absolute;
+            top: 227px;
+            right: 193px;
+            color: #fff;
+        }
+
+        .tb {
+            top: 500px;
+            right: 80px;
+        }
+
+        .dotted {
+            width: 8px;
+            height: 8px;
+            background-color: #0099ff;
+            border-radius: 50%;
+        }
+
+        /* 用属性选择器 */
+        .city div[class^="pulse"] {
+            /* 保证小波纹在父盒子里面水平垂直居中 放大之后便是中心向四周发散*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 8px;
+            height: 8px;
+            /* 设置阴影 */
+            box-shadow: 0 0 12px #009dfd;
+            border-radius: 50%;
+
+            /* 调用动画  linear:代表匀速*/
+            animation:pulse 1.2s linear infinite;
+        }
+
+        .pulse2 {
+            /* 设置延时 */
+            /* !important 提高权重 */
+            animation-delay: 0.4s !important;
+        }
+
+        /*提高权重 10 + 1 + 10 = 21 和 .city div[class^="pulse"]权重一样且后书写则权重高  */
+        .city div.pulse3 {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes pulse {
+            0% {}
+            70% {
+                /* 不用transform中scale的原因是该属性会把阴影一起放大 */
+                width: 40px;
+                height: 40px;
+                /* 透明度 1：表示不变*/
+                opacity: 1;
+            }
+            100%{
+                width: 70px;
+                height: 70px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="map">
+        <div class="city">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+
+        <div class="city tb">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+    </div>
+</body>
+</html>

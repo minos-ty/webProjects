@@ -1,0 +1,74 @@
+<view>
+<!-- indicator-dots="true"等是数字swiper组件的，在wxss里面设置无效-->
+<!-- interval="2000" 的时间单位是毫秒 2000代表2秒 -->
+<!-- 属性的bool值要以数据绑定的形式书写才能是真正的bool值 -->
+  <swiper vertical="{{false}}" indicator-dots="{{true}}" autoplay="{{true}}" interval="5000">
+  <!-- 要设置轮播图的高，必须对swiper的属性进行设置才能生效 -->
+    <swiper-item> <!-- swiper-item的高框取决于swiper，swiper-item会自动填满swiper -->
+      <image src="/images/wx.png"></image>
+    </swiper-item>
+    <swiper-item>
+       <image src="/images/vr.png"></image>
+    </swiper-item>
+    <swiper-item>
+       <image src="/images/iqiyi.png"></image>
+    </swiper-item>
+  </swiper>
+
+   <!-- <view class="post-container">
+    <view class="post-auther-date">
+      <image  class="post-auther" src="/images/avatar/2.png"></image>
+      <text class="post-date">{{date1}}</text> <!-- 双花括号是数据绑定的基本语法,date数据在js中指定 -->
+    <!-- </view>
+    <text class="post-title">{{title1}}</text>
+    <image class="post-image" src="/images/post/bl.png"></image>
+    <text class="post-content">
+    比利林恩的中场战事比利林恩的中场战事比利林恩的中场战事比利林恩的中场战事比利林恩的中场战事比利林恩的中场战事比利林恩的中场战事比利林恩的中场战事比利林恩的中场战事比利林恩的中场战事比利林恩的中场战事比利林恩的中场战事比利林恩的中场战事比利林恩的中场战事
+    </text> -->
+    <!-- <view class="post-like">
+      <image class="post-like-image "src="../../images/icon/chat.png"></image>
+      <text class="post-like-font" >96</text>
+      <image class="post-like-image" src="../../images/icon/view.png"></image>
+      <text class="post-like-font">112</text>
+    </view> -->
+  <!-- </view> --> 
+
+  <!-- <view class="post-container">
+    <view class="post-auther-date">
+      <image  class="post-auther" src="{{img.auther_img}}"></image>
+      <text class="post-date"> {{"hello"+date}}</text> <!-- 双花括号中也可以进行运算 -->
+    <!-- </view>
+    <text wx:if="{{title_condition}}" class="post-title">{{title}}</text> <!--wx:if="" 条件判断控制元素在特定条件下显示-->
+    <!-- <image class="post-image" src="{{img.post_img}}"></image>
+    <text class="post-content">{{content}}</text>
+    <view class="post-like">
+      <image class="post-like-image "src="../../images/icon/chat.png"></image>
+      <text class="post-like-font" >{{view_num}}</text>
+      <image class="post-like-image" src="../../images/icon/view.png"></image>
+      <text class="post-like-font">{{collect_num}}</text>
+    </view> --> 
+  <!-- </view> --> 
+
+  <!-- 实际开发中一般用wx:for循环输出多个框架相同内容不同的view -->
+  <!-- wx:for="{{posts_key}}" 指定了一个数组 -->
+  <!-- wx:for-item="item"指定了该数组下面的子元素，item为变量名 -->
+  <!-- wx:for-index="" 数组中对象的序号 -->
+  <block wx:for="{{posts_key}}" wx:for-item="item" wx:for-index="idx">
+  <text>{{idx}}</text> <!-- 显示对象在数组中的序号-->
+  <view class="post-container">
+    <view class="post-auther-date">
+      <image  class="post-auther" src="{{item.img.author_img}}"></image>
+      <text class="post-date"> {{item.date}}</text>
+    </view>
+    <text class="post-title">{{item.title}}</text>
+    <image class="post-image" src="{{item.img.post_img}}"></image>
+    <text class="post-content">{{item.content}}</text>
+    <view class="post-like">
+      <image class="post-like-image "src="../../images/icon/chat.png"></image>
+      <text class="post-like-font" >{{item.collect_num}}</text>
+      <image class="post-like-image" src="../../images/icon/view.png"></image>
+      <text class="post-like-font">{{item.view_num}}</text>
+    </view>
+  </view>
+  </block>
+</view>

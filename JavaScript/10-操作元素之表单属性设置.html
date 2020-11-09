@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>btn</button>
+    <input type="text" value="input here...">
+
+    <script>
+        //1.get element
+        var btn = document.querySelector('button');
+        var input = document.querySelector('input');
+
+        //2.register 事件 ，form中的值是通过value来改变的
+        btn.onclick = function() {
+            input.value = 'fuck me baby';
+
+        //如果想要某个表单被禁用，不能在被点击用disabled
+            // btn.disabled = true;
+        this.disabled = true; //this指向的是函数的调用者
+        }
+
+       
+    </script>
+</body>
+</html>

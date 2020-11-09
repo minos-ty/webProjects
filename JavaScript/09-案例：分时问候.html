@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../resources/media/s.gif" alt="">
+    <div>上午好</div>
+
+    <script>
+        var img = document.querySelector('img');
+        var div = document.querySelector('div');
+
+        var date = new Date();
+        var hour = date.getHours();
+
+        if(hour < 12){
+            img.src = "../resources/media/s.gif";
+            div.innerText = "下上好";
+        }else if(hour >= 12 && hour <= 14){
+            img.src = "../resources/media/z.gif";
+            div.innerText = "中午好";
+        }else if(hour > 14 && hour <17){
+            img.src = "../resources/media/x.gif";
+            div.innerText = "下午好";
+        }
+    </script>
+</body>
+</html>

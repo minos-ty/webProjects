@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 选择ul标签下第一个li标签; 以":"形式写的称为伪类选择器 " */
+        ul li:first-child {
+            background-color: pink;
+        }
+
+        ul li:last-child {
+            background-color: red;
+        }
+
+        /*========================================================== 
+        nth-child(n) : 只关注第几个孩子,并不关注孩子标签的类型
+            n可以是数字,关键词和公式
+            n是数字,就是选择第几个
+            常见的关键词有 even odd
+            常见的公式(如果n是公式,则公式中的n从0开始计算 0 1 2 3 4 5.......  但是第0个元素或者超出的元素会被忽略):
+            2n   : 偶数
+            2n+1 : 奇数
+            5n   : 5 10 15 
+            n+5  : 从第五个开始(包含第五个)到最后一个
+            -n+5 : 前五个(包含第五个)
+         ========================================================== */
+        ul li:nth-child(8) { /* 选择第8个子标签 */
+            background-color: royalblue;
+        }
+
+        ul p:nth-child(1) { /* 并不能把第一个p标签选择出来 */
+            background-color: royalblue;
+        }
+
+        ul li:nth-child(even){
+            background-color: slateblue;
+        }
+
+        /* nth-of-type :同时关注子标签的类型*/
+        div span:first-of-type{ /* 把第一个span选择出 */
+            background-color: slategrey;
+        }
+
+        div span:nth-of-type(3){
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <!-- 正确语法中ul标签下一级只能是li标签 -->
+        <p> *** </p>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+
+    <div>
+        <p>我是一个p标签</p>
+        <span>我是span</span>
+        <span>我是span</span>
+        <span>我是span</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 解决IE浏览器不支持bootstrap -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--[if lt IE 9]>
+          <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!-- 导入bootstrap定义的css样式 -->
+        <!-- 
+            注意相对路径格式 bootstrap/css/bootstrap.min.css
+            和绝对路径格式 /ag/ag/ag 的区别
+        -->
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <style>
+            .row div {
+                height: 50px;
+                background-color: pink;
+            }
+
+            span {
+                font-size: 16px;
+                color:blue;
+            }
+        </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- 隐藏 -->
+            <div class="col-md-3">1</div>
+            <div class="col-md-3">2</div>
+            <div class="col-md-3 hidden-md hidden-xs">超小 中 屏隐藏列</div>
+            <div class="col-md-3">4</div>
+
+            <!-- 显示 -->
+            <div class="col-xs-3">
+                <span class="visible-lg">在大屏时显示</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

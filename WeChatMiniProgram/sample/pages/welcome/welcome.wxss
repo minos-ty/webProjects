@@ -1,0 +1,44 @@
+/* flex 布局 弹性盒子模型 */
+.container{ /*view在页面是根据元素位置来确定大小的，与HTML中div原理一样 */
+  display: flex; /* 把containner设置成弹性盒子模型 */
+  flex-direction: column; /* 把容器中元素设置成垂直分布 */
+  align-items: center;/*把容器中元素水平居中*/
+}
+
+page{
+  /* 设置全局背景颜色 page是自动生成的根标签*/
+  background-color: #b3d4db;
+  height: 100%;
+}
+
+.user-avatar{
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 160rpx;
+}
+
+.user-name{
+  font-size: 32rpx;
+  font-weight: bold;
+  /* font-family: fantasy;  全局样式提取到app.wxss中*/
+
+}
+
+.moto-container{
+  border: 1px solid #405f80;
+  border-radius: 5px; /* 边框圆角 */
+  height: 80rpx;
+  width: 200rpx;
+  text-align: center;
+  margin-top: 200rpx;
+}
+
+.moto{
+  font-size: 22rpx;
+  font-weight: bold;
+  /* 字体样式的不同会对文字水平居中的效果有影响 数值设置和容器高度一样，实现垂直居中 */
+  line-height: 80rpx;
+  color: #405f80;
+  
+}
+

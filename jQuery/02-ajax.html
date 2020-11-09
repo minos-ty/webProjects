@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        ajax是一种无须重新加载整个网页的情况下，能够更新部分网页的技术
+
+        实现方法
+            1.原生的js实现(了解)
+            2.jquery实现方法(掌握)
+                $.ajax({键值对})
+
+                $.get(url, [data], [callback], [type]) 发送get请求  
+                    *url:请求路径
+                    *data:请求参数
+                    *callback:回调函数
+                    *type:响应结果的类型
+
+                $.post() 发送post请求
+    -->
+
+    <script>
+        // 方式一
+        $.ajax({
+            url:"ajaxServlet", //请求路径
+            type:"POST",//请求方式
+            data:{"username":"jack","age":123},//请求参数
+            dataType:"text",//设置接收到的响应数据的格式
+            success:function(data){//响应成功后的回调函数
+                alert(data);
+            },
+            error:function(ps) { //如果响应出现错误会执行的回调函数
+                
+            }
+        });
+
+        // 方式二
+        $.get("ajaxServlet", {username:'tom'},function(data) {
+            alert(data);
+        },"text");
+
+         // 方式三
+        $.post("ajaxServlet", {username:'tom'},function(data) {
+            alert(data);
+        },"text");
+
+
+    </script>
+</body>
+</html>

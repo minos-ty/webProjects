@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        controls="controls" : 显示播放控件
+        autoplay="autoplay" : 音频自动播放 *谷歌浏览器禁用该属性
+        loop="loop" :  当音频结束时自动重新播放
+        src : "url" : 音乐源地址 *不同的浏览器对音源格式要求不同,解决方案是准备多个格式音源
+     -->
+    <audio src="/Users/ty/Documents/webStu/media/1.mp3" controls="controls" loop="loop"></audio>
+    <audio controls="controls" autoplay="autoplay">
+        <source src="/Users/ty/Documents/webStu/media/1.mp3" type="audio/mpeg">
+        <source src="/Users/ty/Documents/webStu/media/1.ogg" type="audio/ogg">
+    </audio>
+
+    <!-- 
+        同样因为浏览器对视频格式的支持不同,需要设置不同播放源视频的格式 
+        autoplay="autoplay" : 谷歌浏览器禁用自动播放 *通过给视频添加静音属性可解决
+        muted="muted" : 静音播放
+        loop="loop" : 循环播放视频
+        poster="ImgUrl" : 非自动播放时设置首页
+    -->
+    <video src="/Users/ty/Documents/webStu/media/2.mp4" controls="controls"></video>
+
+    <video autoplay="autoplay" muted="muted" loop="loop">
+        <source src="/Users/ty/Documents/webStu/media/2.mp4" type="video/mp4"> 
+        <source src="/Users/ty/Documents/webStu/media/2.ogg" type="video/ogg"> 
+    </video>
+
+</body>
+</html>

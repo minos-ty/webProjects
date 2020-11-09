@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* 透视写到被观察元素的父盒子上  
+            perspective: 500px;相当于控制眼睛和屏幕见得距离
+            translateZ(100px);控制物体离屏幕的距离
+            */
+            perspective: 500px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transform: translateX(400px) translateY(100px) translateZ(100px);
+            /*
+            1.translateZ 沿着z轴移动
+            2.translateZ 单位一般用px
+            3.translateZ(100px) 向屏幕外移动100px
+            4.3D移动简写 transform: translate3d(x,y,z); x y z不可省略，没有写0
+            */
+
+    
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

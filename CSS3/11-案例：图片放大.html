@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            /* 添加动画过度效果 谁动给谁加 */
+            transition: all 3s;
+        }
+
+        div {
+            overflow: hidden;
+            float: left;
+            margin: 10px;
+        }
+
+        /* 实现鼠标经过图片放大 */
+        div img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href=""><img src="../resources/media/scale.jpeg" alt=""></a>
+    </div>
+    <div>
+        <a href=""><img src="../resources/media/scale.jpeg" alt=""></a>
+    </div>
+    <div>
+        <a href=""><img src="../resources/media/scale.jpeg" alt=""></a>
+    </div>
+</body>
+</html>

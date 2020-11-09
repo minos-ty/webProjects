@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 解决IE浏览器不支持bootstrap -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--[if lt IE 9]>
+          <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!-- 导入bootstrap定义的css样式 -->
+        <!-- 
+            注意相对路径格式 bootstrap/css/bootstrap.min.css
+            和绝对路径格式 /ag/ag/ag 的区别
+        -->
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <style>
+            .row div {
+                height: 50px;
+                background-color: pink;
+            }
+        </style>
+    <title>Document</title>
+</head>
+<body>
+    <!-- col-md-offset-4 盒子向右偏移4个栅格  偏移份数=12-盒子所占份数 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">左侧</div>
+            <div class="col-md-4 col-md-offset-4">右侧</div>
+        </div>
+
+        <!-- 偏移份数=(12-8)/2 -->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">居中盒子</div>
+        </div>
+    </div>
+</body>
+</html>

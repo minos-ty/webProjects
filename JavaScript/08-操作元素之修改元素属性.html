@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id='pig'>pig</button>
+    <button id='dog'>dog</button>
+    <img src="../resources/media/dog.jpg" alt="" title="dog">
+
+    <script>
+        //修改元素属性 src
+        //1.获取元素
+        var pig = document.getElementById('pig');
+        var dog = document.getElementById('dog');
+        var img = document.querySelector('img');
+        //2.注册事件 处理程序
+        pig.onclick = function() {
+            img.src = "../resources/media/pig.jpg";
+            img.title = "pig";
+        }
+
+        dog.onclick = function() {
+            img.src="../resources/media/dog.jpg";
+            img.title = "dog";
+        }
+    </script>
+</body>
+</html>

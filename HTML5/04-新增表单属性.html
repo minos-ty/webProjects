@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        required="required" : 表单内容不能为空,否则不能提交
+        placeholder="提示信息" : 提示信息(占位符)
+        autofocus="autofocus" : 鼠标自动聚焦
+        autocomplete="off/on" : on>输入过的信息下次输入时会自动提示,默认on  off>关闭提示 *必须要有name属性才能设置
+        multiple="multiple" : 上传文件时可以多选
+     -->
+    <form action="">
+        用户名: <input type="text" required="required" placeholder="提示信息" autofocus="autofocus" name="username" autocomplete="off">
+        上传头像:<input type="file" name="" id="" multiple="multiple">
+        <input type="submit" value="提交"> 
+    </form>
+</body>
+</html>
